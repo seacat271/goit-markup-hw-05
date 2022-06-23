@@ -578,7 +578,6 @@ text-align: center;
 /* Modal window */
 
 .backdrop {
-   
     position: fixed;
     top: 0;
     left: 0;
@@ -587,13 +586,37 @@ text-align: center;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .modal {
-    width: 528px;
-    height: 581px;
-    background-color: var(--basic-background);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--basic-background);
+}
 
+.modal-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--basic-background);
+}
+
+.svg-modal-close {
+    fill: var(--logo-color);
 }
