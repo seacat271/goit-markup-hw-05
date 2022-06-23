@@ -144,6 +144,13 @@ fill: currentColor;
 margin-right: 10px;
 }
 
+.navigation-item>.link,
+.contact-item>.link {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .navigation-item>.link:hover,
 .navigation-item>.link:focus,
 .navigation-item.current,
@@ -201,6 +208,9 @@ text-align: center;
     line-height: 1.87;
     padding: 10px 32px;
     border-radius: 4px;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.hero:hover,
@@ -309,6 +319,9 @@ text-align: center;
     display: flex;
     justify-content: center;   
     align-items: center;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -339,6 +352,9 @@ text-align: center;
     border-style: solid;
     align-items: center;
     justify-content: center;
+    transition-property: border-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -375,6 +391,7 @@ text-align: center;
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.71;
+    
 }
 
 .map {
@@ -383,6 +400,12 @@ text-align: center;
 
 .address-item:not(:last-child) {
     margin-bottom: 10px;
+}
+
+.address-item>.link {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-item>.link:hover,
@@ -422,6 +445,9 @@ text-align: center;
 .footer .social-link {
     color: var(--basic-background);
     background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .social-link:hover,
@@ -448,6 +474,9 @@ text-align: center;
     line-height: 1.63;
     padding: 6px 22px;
     border-radius: 4px;
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-portfolio:hover,
@@ -467,6 +496,9 @@ text-align: center;
 
 .work-item {
     margin: 15px;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-item:hover,
