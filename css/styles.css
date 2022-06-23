@@ -130,12 +130,28 @@ color: var(--attention-color);
     margin-right: 50px;
 }
 
+
+.navigation-item {
+position: relative;
+}
+
 .navigation-item,
 .contact-item {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+}
+
+.navigation-item.current::after {
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--attention-color);
 }
 
 .mail-icon, 
@@ -536,6 +552,17 @@ text-align: center;
                 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.work-item .overlay-thumb {
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-item:hover .overlay-thumb,
+.work-item:focus .overlay-thumb {
+    transform: translateY(-100%);
+}
+
 .container-border {
     padding: 20px 24px;
     border-color: var(--border-color);
@@ -546,21 +573,28 @@ text-align: center;
 }
 
 .work-thumb {
-
+    position: relative;
+    overflow: hidden;
 }
 
 .img-work {
     display: block;
 }
 
-.thumb-owerlay {
-    height: 100%;
+.overlay-thumb {
+    display: flex;
+    height: 100%;    
     width: 100%;
+    position: absolute;
+}
+
+
+.overlay {
+    padding: 63px 24px 0 24px;
     font-size: 18px;
     line-height: 1.56;
     color: var(--basic-background);
     background-color: rgba(33, 150, 243, 0.9);
-
 }
 
 .work-title {
@@ -584,10 +618,16 @@ text-align: center;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    /* transform: scale(1); */
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
+    /* transform: scale(0.8); */
     pointer-events: none;
 }
 
@@ -602,6 +642,10 @@ text-align: center;
     display: flex;
     justify-content: flex-end;
     background-color: var(--basic-background);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+                0px 1px 1px rgba(0, 0, 0, 0.14), 
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 .modal-close {
